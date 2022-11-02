@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find robot_description)/urdf/gripper/gripper.link.xacro" />
+  <xacro:include filename="$(find robot_description)/urdf/gripper/gripper.transmission.xacro" />
+
+  <xacro:macro name="gripper_joint" params="prefix">
+
+    <joint name="${prefix}right_inner_knuckle_joint" type="revolute">
+      <origin xyz="0 0.03 0.1" rpy="-1.5708 0 -1.5708" />
+      <parent link="${prefix}gripper_base_link" />
+      <child link="${prefix}right_inner_knuckle_link" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.9" effort="1000" velocity="1" />
+    </joint>
+
+    <joint name="${prefix}left_inner_knuckle_joint" type="revolute">
+      <origin xyz="0 -0.03 0.1" rpy="-1.5708 0 -1.5708" />
+      <parent link="${prefix}gripper_base_link" />
+      <child link="${prefix}left_inner_knuckle_link" />
+      <axis xyz="0 0 1" />
+      <limit lower="-3.14" upper="3.14" effort="0.1" velocity="100" />
+      <mimic joint="${prefix}right_inner_knuckle_joint" multiplier="-1"/>
+    </joint>
+
+    <joint name="${prefix}right_outer_knuckle_joint" type="revolute">
+      <origin xyz="0 0.04 0.098" rpy="-1.5708 0 -1.5708" />
+      <parent link="${prefix}gripper_base_link" />
+      <child link="${prefix}right_outer_knuckle_link" />
+      <axis xyz="0 0 1" />
+      <limit lower="-3.14" upper="3.14" effort="0.1" velocity="100" />
+      <mimic joint="${prefix}right_inner_knuckle_joint" offset="0"/>
+    </joint>
+
+    <joint name="${prefix}left_outer_knuckle_joint" type="revolute">
+      <origin xyz="0 -0.04 0.098" rpy="-1.5708 0 -1.5708" />
+      <parent link="${prefix}gripper_base_link" />
+      <child link="${prefix}left_outer_knuckle_link" />
+      <axis xyz="0 0 1" />
+      <limit lower="-3.14" upper="3.14" effort="0.1" velocity="100" />
+      <mimic joint="${prefix}right_inner_knuckle_joint" multiplier="-1"/>
+    </joint>
+
+    <joint name="${prefix}right_inner_finger_joint" type="revolute">
+      <origin xyz="-0.0105579737308061 -0.0406513122875462 0" rpy="0 0 0" />
+      <parent link="${prefix}right_inner_knuckle_link" />
+      <child link="${prefix}right_inner_finger_link" />
+      <axis xyz="0 0 1" />
+      <limit lower="-3.14" upper="3.14" effort="0.1" velocity="100" />
+      <mimic joint="${prefix}right_inner_knuckle_joint" multiplier="-1"/>
+    </joint>
+
+    <joint name="${prefix}left_inner_finger_joint" type="revolute">
+      <origin xyz="0.0105579737308078 -0.040651312287546 0" rpy="0 0 0" />
+      <parent link="${prefix}left_inner_knuckle_link" />
+      <child link="${prefix}left_inner_finger_link" />
+      <axis xyz="0 0 1" />
+      <limit lower="-3.14" upper="3.14" effort="0.1" velocity="100" />
+      <mimic joint="${prefix}right_inner_knuckle_joint" multiplier="1"/>
+    </joint>
+  </xacro:macro>
+</robot>

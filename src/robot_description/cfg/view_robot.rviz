@@ -1,0 +1,505 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /TF1
+        - /TF1/Frames1
+      Splitter Ratio: 0.5
+    Tree Height: 748
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        COMATRIX_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        COMATRIX_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        D435I_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        D435I_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        Mount_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftbase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        leftbase_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        leftbase_link_inertia:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftflange:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        leftforearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftgripper_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftleft_inner_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftleft_inner_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftleft_outer_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftright_inner_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftright_inner_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftright_outer_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftshoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lefttool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        leftupper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftwrist_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftwrist_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leftwrist_3_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightbase:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rightbase_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rightbase_link_inertia:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightflange:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rightforearm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightgripper_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightleft_inner_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightleft_inner_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightleft_outer_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightoptoforce_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rightoptoforce_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightright_inner_finger_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightright_inner_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightright_outer_knuckle_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightshoulder_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        righttool0:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        rightupper_arm_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightwrist_1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightwrist_2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        rightwrist_3_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world_table:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        COMATRIX_base_link:
+          Value: false
+        COMATRIX_link:
+          Value: false
+        D435I_base_link:
+          Value: false
+        D435I_link:
+          Value: false
+        Mount_link:
+          Value: false
+        leftbase:
+          Value: false
+        leftbase_link:
+          Value: false
+        leftbase_link_inertia:
+          Value: false
+        leftflange:
+          Value: false
+        leftforearm_link:
+          Value: false
+        leftgripper_base_link:
+          Value: false
+        leftleft_inner_finger_link:
+          Value: false
+        leftleft_inner_knuckle_link:
+          Value: false
+        leftleft_outer_knuckle_link:
+          Value: false
+        leftright_inner_finger_link:
+          Value: false
+        leftright_inner_knuckle_link:
+          Value: false
+        leftright_outer_knuckle_link:
+          Value: false
+        leftshoulder_link:
+          Value: false
+        lefttool0:
+          Value: false
+        leftupper_arm_link:
+          Value: false
+        leftwrist_1_link:
+          Value: false
+        leftwrist_2_link:
+          Value: false
+        leftwrist_3_link:
+          Value: false
+        rightbase:
+          Value: false
+        rightbase_link:
+          Value: false
+        rightbase_link_inertia:
+          Value: false
+        rightflange:
+          Value: false
+        rightforearm_link:
+          Value: false
+        rightgripper_base_link:
+          Value: false
+        rightleft_inner_finger_link:
+          Value: false
+        rightleft_inner_knuckle_link:
+          Value: false
+        rightleft_outer_knuckle_link:
+          Value: false
+        rightoptoforce_base_link:
+          Value: false
+        rightoptoforce_link:
+          Value: false
+        rightright_inner_finger_link:
+          Value: false
+        rightright_inner_knuckle_link:
+          Value: false
+        rightright_outer_knuckle_link:
+          Value: false
+        rightshoulder_link:
+          Value: false
+        righttool0:
+          Value: false
+        rightupper_arm_link:
+          Value: false
+        rightwrist_1_link:
+          Value: false
+        rightwrist_2_link:
+          Value: false
+        rightwrist_3_link:
+          Value: false
+        world_table:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: false
+      Show Axes: true
+      Show Names: false
+      Tree:
+        world_table:
+          COMATRIX_base_link:
+            COMATRIX_link:
+              {}
+          leftbase_link:
+            leftbase:
+              {}
+            leftbase_link_inertia:
+              leftshoulder_link:
+                leftupper_arm_link:
+                  leftforearm_link:
+                    leftwrist_1_link:
+                      leftwrist_2_link:
+                        leftwrist_3_link:
+                          leftflange:
+                            lefttool0:
+                              D435I_base_link:
+                                Mount_link:
+                                  D435I_link:
+                                    {}
+                                leftgripper_base_link:
+                                  leftleft_inner_knuckle_link:
+                                    leftleft_inner_finger_link:
+                                      {}
+                                  leftleft_outer_knuckle_link:
+                                    {}
+                                  leftright_inner_knuckle_link:
+                                    leftright_inner_finger_link:
+                                      {}
+                                  leftright_outer_knuckle_link:
+                                    {}
+          rightbase_link:
+            rightbase:
+              {}
+            rightbase_link_inertia:
+              rightshoulder_link:
+                rightupper_arm_link:
+                  rightforearm_link:
+                    rightwrist_1_link:
+                      rightwrist_2_link:
+                        rightwrist_3_link:
+                          rightflange:
+                            righttool0:
+                              rightoptoforce_base_link:
+                                rightgripper_base_link:
+                                  rightleft_inner_knuckle_link:
+                                    rightleft_inner_finger_link:
+                                      {}
+                                  rightleft_outer_knuckle_link:
+                                    {}
+                                  rightright_inner_knuckle_link:
+                                    rightright_inner_finger_link:
+                                      {}
+                                  rightright_outer_knuckle_link:
+                                    {}
+                                rightoptoforce_link:
+                                  {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: world_table
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 1.5919299125671387
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Field of View: 0.7853981852531433
+      Focal Point:
+        X: 0.11605382710695267
+        Y: -0.029114173725247383
+        Z: -0.2575640082359314
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.1253986805677414
+      Target Frame: <Fixed Frame>
+      Yaw: 0.6904008984565735
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1048
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000378fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003e00000378000000ca00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f00000378fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003e00000378000000a600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007800000003efc0100000002fb0000000800540069006d00650100000000000007800000032200fffffffb0000000800540069006d006501000000000000045000000000000000000000050f0000037800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1920
+  X: 0
+  Y: 0

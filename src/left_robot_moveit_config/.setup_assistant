@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_description
+    relative_path: urdf/sence/left_robot_calibration.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/LeftRobotSence.srdf
+  CONFIG:
+    author_name: aquila
+    author_email: aquilacrack@gmail.com
+    generated_timestamp: 1667385181

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<robot name="DoubleRobotSence" xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <!--Double Robot Define-->
+  <xacro:include filename="$(find robot_description)/urdf/robot/ur5_macro.xacro"/>
+  <xacro:ur5_robot prefix="left"  />
+  <xacro:ur5_robot prefix="right" />
+  <!--Import Table--> 
+  <link name="world_table">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://robot_description/meshes/table/visual/table.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://robot_description/meshes/table/collision/table.stl"/>
+        </geometry>
+      </collision>
+    </link>
+  <!--Joint UR and Table--> 
+  <joint name="left" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <parent link="world_table"/>
+      <child link="leftbase_link"/>
+  </joint>
+  <joint name="right" type="fixed">
+    <origin xyz="0 1.08 0" rpy="0 0 3.14"/>
+    <parent link="world_table"/>
+    <child link="rightbase_link"/>
+  </joint>
+  <!--Import Gripper--> 
+  <xacro:include filename="$(find robot_description)/urdf/gripper/gripper.urdf.xacro"/>
+  <xacro:gripper prefix="left"  />
+  <xacro:gripper prefix="right" />
+  <!--Import OptoForce--> 
+  <xacro:include filename="$(find robot_description)/urdf/optoforce/optoforce.xacro"/>
+  <xacro:optoforce prefix="right"  />
+  <!--Import Camera--> 
+  <xacro:include filename="$(find robot_description)/urdf/camera/COMATRIX.xacro"/>
+  <xacro:include filename="$(find robot_description)/urdf/camera/D435I.xacro"/>
+  <xacro:COMATRIX prefix=""  />
+  <xacro:D435I prefix=""  />
+  <!--Camera - COMATRIX --> 
+  <joint name="camera_COMATRIX" type="fixed">
+      <origin xyz="0.2685 0.5918 2.5362" rpy="0 0 0"/>
+      <parent link="world_table"/>
+      <child link="COMATRIX_base_link"/>
+  </joint>
+  <!--Joint Left UR and Gripper--> 
+  <joint name="left_camera" type="fixed">
+      <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0"/>
+      <parent link="lefttool0"/>
+      <child link="D435I_base_link"/>
+  </joint>
+  <joint name="left_gripper" type="fixed">
+      <origin xyz="0 0 0.005" rpy="0 1.5708 0"/>
+      <parent link="D435I_base_link"/>
+      <child link="leftgripper_base_link"/>
+  </joint>
+  <!--Joint Right UR and Gripper--> 
+  <joint name="right_optoforce" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 1.5708 0"/>
+    <parent link="righttool0"/>
+    <child link="rightoptoforce_base_link"/>
+  </joint>
+  <joint name="right_gripper" type="fixed">
+    <origin xyz="-0.035 0 0" rpy="0 -1.5708 0"/>
+    <parent link="rightoptoforce_base_link"/>
+    <child link="rightgripper_base_link"/>
+  </joint>
+</robot>

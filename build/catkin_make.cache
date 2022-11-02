@@ -1,0 +1,2 @@
+Universal_Robots_ROS_Driver/controller_stopper:Universal_Robots_ROS_Driver/ur_calibration:Universal_Robots_ROS_Driver/ur_dashboard_msgs:Universal_Robots_ROS_Driver/ur_robot_driver:double_robot_moveit_config:left_robot_moveit_config:robot_description:ur_msgs
+-DCATKIN_DEVEL_PREFIX=/home/aquilacrack/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/aquilacrack/catkin_ws/install -G Unix Makefiles

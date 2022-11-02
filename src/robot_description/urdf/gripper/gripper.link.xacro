@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <!--Define link--> 
+  <xacro:macro name="gripper_base_link" params="prefix">
+    <link name="${prefix}gripper_base_link">
+      <inertial>
+        <origin
+          xyz="-0.00015832550859178 6.00986629246958E-08 0.0334714588842836"
+          rpy="0 0 0" />
+        <mass
+          value="0.0614516745908847" />
+        <inertia
+          ixx="4.71226790326537E-05"
+          ixy="-6.42799733453212E-12"
+          ixz="-8.59927126234267E-08"
+          iyy="3.68270723657892E-05"
+          iyz="-1.57730454020778E-10"
+          izz="2.83716920169738E-05" />
+        </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/base_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+           <mesh filename="package://robot_description/meshes/gripper/collision/base_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}gripper_base_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="right_inner_finger_link" params="prefix">
+    <link name="${prefix}right_inner_finger_link">
+      <inertial>
+      <origin
+        xyz="-0.000547718903149107 -0.00473632997360129 -6.95938636933526E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00164745875291186" />
+      <inertia
+        ixx="1.26149737590104E-07"
+        ixy="3.54278298182331E-08"
+        ixz="-1.28016412271008E-23"
+        iyy="6.1942875677354E-08"
+        iyz="1.93258504605574E-23"
+        izz="1.48553603197574E-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/right_inner_finger_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/collision/right_inner_finger_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}right_finger_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="left_inner_finger_link" params="prefix">
+    <link name="${prefix}left_inner_finger_link">
+      <inertial>
+      <origin
+        xyz="0.000547718903149107 -0.00473632997360129 1.64062646842289E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00164745875291187" />
+      <inertia
+        ixx="1.26149737590105E-07"
+        ixy="-3.54278298182331E-08"
+        ixz="5.96972422095491E-23"
+        iyy="6.19428756773541E-08"
+        iyz="1.01825795219911E-22"
+        izz="1.48553603197574E-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/left_inner_finger_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/collision/left_inner_finger_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}left_inner_finger_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="right_inner_knuckle_link" params="prefix">
+    <link name="${prefix}right_inner_knuckle_link">
+      <inertial>
+        <origin
+          xyz="-0.00411416532845304 -0.0158407497341605 3.97769607966968E-20"
+          rpy="0 0 0" />
+        <mass
+          value="0.0032941860316693" />
+        <inertia
+          ixx="5.25416511458173E-07"
+          ixy="-1.08533522266847E-07"
+          ixz="-1.89801444979313E-23"
+          iyy="1.35718811647913E-07"
+          iyz="-3.00404672564573E-23"
+          izz="4.67315893953276E-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/right_inner_knuckle_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/collision/right_inner_knuckle_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}right_inner_knuckle_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="left_inner_knuckle_link" params="prefix">
+    <link name="${prefix}left_inner_knuckle_link">
+      <inertial>
+        <origin
+          xyz="0.0041141653284529 -0.0158407497341605 -4.77705239959184E-18"
+          rpy="0 0 0" />
+        <mass
+          value="0.0032941860316693" />
+        <inertia
+          ixx="5.25416511458174E-07"
+          ixy="1.08533522266844E-07"
+          ixz="-1.95225749930408E-22"
+          iyy="1.35718811647911E-07"
+          iyz="-8.20512748131175E-23"
+          izz="4.67315893953276E-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/left_inner_knuckle_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/collision/left_inner_knuckle_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}left_inner_knuckle_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="right_outer_knuckle_link" params="prefix">
+    <link name="${prefix}right_outer_knuckle_link">
+      <inertial>
+      <origin
+          xyz="-0.00398472564378293 -0.0153423687779195 -8.77649391425714E-18"
+          rpy="0 0 0" />
+        <mass
+          value="0.00190973027372148" />
+        <inertia
+          ixx="4.56971124963922E-07"
+          ixy="-9.82459557625233E-08"
+          ixz="1.92074243296741E-23"
+          iyy="1.04211699335194E-07"
+          iyz="-1.29279011708164E-22"
+          izz="4.1648520150152E-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/right_outer_knuckle_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/collision/right_outer_knuckle_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}right_finger_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="left_outer_knuckle_link" params="prefix">
+    <link name="${prefix}left_outer_knuckle_link">
+      <inertial>
+        <origin
+        xyz="0.00398472564378281 -0.0153423687779195 -1.19200041555778E-17"
+        rpy="0 0 0" />
+        <mass
+        value="0.00190973027372148" />
+        <inertia
+        ixx="4.56971124963924E-07"
+        ixy="9.82459557625202E-08"
+        ixz="-1.13080553862188E-22"
+        iyy="1.04211699335192E-07"
+        iyz="-2.62367579147821E-22"
+        izz="4.1648520150152E-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/visual/left_outer_knuckle_link.dae"/>
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://robot_description/meshes/gripper/collision/left_outer_knuckle_link.stl"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <gazebo reference="${prefix}left_finger_link">
+      <implicitSpringDamper>1</implicitSpringDamper>
+      <mu1>100000</mu1>
+      <mu2>100000</mu2>
+      <kp>100000000.0</kp>
+      <kd>1.0</kd>
+    </gazebo> 
+  </xacro:macro>
+
+  <xacro:macro name="gripper_link" params="prefix">
+    <xacro:gripper_base_link  prefix="${prefix}"/>
+    <xacro:right_inner_finger_link    prefix="${prefix}"/>
+    <xacro:left_inner_finger_link     prefix="${prefix}"/>
+    <xacro:right_outer_knuckle_link    prefix="${prefix}"/>
+    <xacro:left_outer_knuckle_link     prefix="${prefix}"/>
+    <xacro:right_inner_knuckle_link    prefix="${prefix}"/>
+    <xacro:left_inner_knuckle_link     prefix="${prefix}"/>
+  </xacro:macro>
+</robot>

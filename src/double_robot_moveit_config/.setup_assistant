@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_description
+    relative_path: urdf/sence/robot_sence.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/DoubleRobotSence.srdf
+  CONFIG:
+    author_name: Aquila
+    author_email: aquilacrack@gmail.com
+    generated_timestamp: 1667383357

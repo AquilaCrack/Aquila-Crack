@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="$(find robot_description)/urdf/gripper/gripper.link.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/gripper/gripper.transmission.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/gripper/gripper.joint.xacro" />
+    <xacro:macro name="gripper" params="prefix">
+        <xacro:gripper_link prefix="${prefix}"/>
+        <xacro:gripper_joint prefix="${prefix}"/>
+        <xacro:gripper_transmission prefix="${prefix}"/>
+    </xacro:macro>
+</robot>
